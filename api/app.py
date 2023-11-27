@@ -16,3 +16,4 @@ def submit():
     return render_template(
         "hello.html", name=input_name, email=input_email, message=input_message
     )
+

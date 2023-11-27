@@ -24,3 +24,9 @@ def process_query(query):
 
     if query == "asteroids":
         return "Unknown"
+
+
+@app.route("/query", methods=["GET"])
+def query():
+    query_param = request.args.get('q', default='', type=str)
+    return process_query(query_param)

@@ -8,10 +8,11 @@ def hello_world():
     return render_template("index.html")
 
 
-@app.route("/submit", methods = ["POST"])
+@app.route("/submit", methods=["POST"])
 def submit():
     input_name = request.form.get("name")
     input_email = request.form.get("email")
     input_message = request.form.get("message")
-    return render_template("hello.html", name=input_name, email=input_email, message=input_message)
-    
+    return render_template(
+        "hello.html", name=input_name, email=input_email, message=input_message
+    )
